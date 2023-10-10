@@ -4,11 +4,25 @@ pragma solidity ⌃0.8.8; // stable version
 // boolean, uint, int, address, bytes
 contract SimpleStorage {
 // defaults to null (0)
+// public, private, external, internal (default)
 uint256 public favoriteNumber;
+
+struct People { 
+uint256 favoriteNumber;
+string name;
+}
+
+People[] public people;
 
 function store(uint256 _favoriteNumber) public {
 
 favoriteNumber = _favoriteNumber;
+
+function addPerson(string memory _name, uint256 _favoriteNumber) public {
+People memory newPerson = People({favoriteNumber: _favoriteNumber, name: _name});
+people.push(newPerson);
+
+}
 
 }
 
