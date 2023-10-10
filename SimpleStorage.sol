@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ⌃0.8.8; // stable vers
+pragma solidity ⌃0.8.8; // stable ver
 
 // boolean, uint, int, address, bytes
 contract SimpleStorage {
