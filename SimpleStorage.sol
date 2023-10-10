@@ -19,10 +19,8 @@ function store(uint256 _favoriteNumber) public {
 favoriteNumber = _favoriteNumber;
 
 function addPerson(string memory _name, uint256 _favoriteNumber) public {
-People memory newPerson = People({favoriteNumber: _favoriteNumber, name: _name});
-people.push(newPerson);
+people.push(_favoriteNumber, _name);
 
 }
-
 }
 
