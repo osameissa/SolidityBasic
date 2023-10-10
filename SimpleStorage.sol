@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ⌃0.8.8; // stable version
 
-contract SimpleStorage {
 // boolean, uint, int, address, bytes
+contract SimpleStorage {
 // defaults to null (0)
 uint256 favoriteNumber;
 
