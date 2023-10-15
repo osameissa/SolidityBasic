@@ -88,3 +88,8 @@ main()
 // 1. Put popcorn in the mircrowave
 // 2. Pour drinks for everyone
 // 3. Wait for popcorn to finish
+
+// Promise
+// Pending
+// Fulfilled
+// Rejected
