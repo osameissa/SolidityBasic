@@ -47,3 +47,39 @@ async function main() {
     // This is the signature of the transaction.
     // There is a lot of math going on with those values, but that's how it's gaurenteed that the transaction is signed!
     // https://ethereum.stackexchange.com/questions/15766/what-does-v-r-s-in-eth-gettransactionbyhash-mean
+    
+    
+    // }
+    // There is also a v, r, and s component of the transaction that Ethers will handle for us.
+    // It's these three components that make up the cryptographic signature.
+    // We won't go into this, because it's a lot of math.
+
+    // console.log("Let's deploy another! Please wait...")
+    // let resp = await wallet.signTransaction(tx)
+    // const sentTxResponse = await wallet.sendTransaction(tx);
+    // console.log(resp)
+
+    let currentFavoriteNumber = await contract.retrieve()
+    console.log(`Current Favorite Number: ${currentFavoriteNumber}`)
+    console.log("Updating favorite number...")
+    let transactionResponse = await contract.store(7)
+    let transactionReceipt = await transactionResponse.wait()
+    currentFavoriteNumber = await contract.retrieve()
+    console.log(`New Favorite Number: ${currentFavoriteNumber}`)
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error)
+        process.exit(1)
+    })
+
+// synchronous [solidity]
+// asynchronous [javascript]
+
+// cooking
+// Synchronous
+// 1. Put popcorn in microwave -> Promise
+// 2. Wait for popcorn to finish
+// 3. Pour drinks for everyone
