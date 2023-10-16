@@ -89,7 +89,7 @@ main()
 // 2. Pour drinks for everyone
 // 3. Wait for popcorn to finish
 
-// Promises
+// Promise
 // Pending
 // Fulfilled
 // Rejected
