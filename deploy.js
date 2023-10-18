@@ -1,6 +1,7 @@
 const ethers = require("ethers")
 // const solc = require("solc")
 const fs = require("fs-extra")
+// in
 require("dotenv").config()
 
 async function main() {
